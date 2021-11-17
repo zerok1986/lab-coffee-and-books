@@ -1,0 +1,40 @@
+<main>
+    <h2>Edit place {{place.name}}</h2>
+
+    <hr>
+
+    <form method="POST" action="/places/edit/{{place.id}}">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name" value="{{place.name}}">
+        </div>
+
+        <div>
+            <label for="type">Type</label>
+            <select class="form-control" id="type" name="type">
+            
+            {{#if isCoffeeShop}}
+                <option value="coffee shop" selected>coffee shop</option>
+                <option value="bookstore">bookstore</option>
+
+            {{else}}
+                <option value="coffee shop">coffee shop</option>
+                <option value="bookstore" selected>bookstore</option>
+            {{/if}}
+
+            </select>
+        </div>
+
+        <div>
+            <label for="location">Location</label>
+            <input class="form-control" id="location latitude" type="text" placeholder="Latitude" name="lat" value={{place.location.coordinates.[0]}}>
+            <input class="form-control" id="location longitude" type="text" placeholder="Longitude" name="lng" value={{place.location.coordinates.[1]}}>
+        </div>
+        <br>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <a class="btn btn-secondary" href="/" role="button">Back to Home</a>
+</main>

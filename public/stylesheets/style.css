@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -9,4 +9,17 @@ a {
 
 h1 {
   color: 15px;
+}
+
+#myMap {
+  background-color: grey;
+  height: 350px;
+}
+
+.btn-info {
+  margin-bottom: 5px;
+}
+
+.btn-danger {
+  margin-bottom: 5px;
 }

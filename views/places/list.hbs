@@ -1,0 +1,26 @@
+<main class="container">
+    <header>
+        <h2>List of places</h2>
+    </header>
+
+    <hr>
+
+    <article>
+        <ul class="list-group">
+        
+            {{#each places}}
+        
+            <li class="list-group-item">
+                <b> {{name}} </b> | {{type}}
+                <br>
+                <a class="btn btn-info" href="/places/edit/{{id}}" role="button"> Edit place </a>
+                <a class="btn btn-danger" href="/places/delete/{{id}}" role="button"> Delete </a>
+            </li>
+        
+            {{/each}}
+        
+        </ul>
+    </article>
+    
+    <a class="btn btn-secondary" href="/" role="button">Back to Home</a>
+</main>

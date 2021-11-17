@@ -1,0 +1,32 @@
+<main>
+    <h2>Create places</h2>
+
+    <hr>
+
+    <form method="POST" action="/places/create/">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select class="form-control" id="type" name="type">
+                <option value="coffee shop">coffee shop</option>
+                <option value="bookstore">bookstore</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+        <label for="location">Location</label>
+            <input class="form-control" id="location latitude" type="text" placeholder="Latitude" name="lat">
+            <input class="form-control" id="location longitude" type="text" placeholder="Longitude" name="lng">
+        </div>
+        <br>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <a class="btn btn-secondary" href="/" role="button">Back to Home</a>
+</main>
